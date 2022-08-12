@@ -127,7 +127,8 @@ public class SpeechManager : MonoBehaviour {
                 Debug.Log($"Creating new byte array of size {size}");
                 // Create buffer
                 byte[] buffer = new byte[size];
-
+                Debug.Log(buffer);
+                Debug.Log(size);
                 Debug.Log($"Reading stream to the end and putting in bytes array.");
                 buffer = ReadToEnd(audioStream);
 
@@ -482,14 +483,16 @@ public class SpeechManager : MonoBehaviour {
             int frequency = 16000;
             var unityData = FixedRAWAudioToUnityAudio(audiodata, 1, 16, out sampleCount);
 
+            unityData = removeClickingFromAudio(unityData);
+
+            Debug.Log(unityData);
             // Convert data to a Unity audio clip
             Debug.Log($"Converting audio data of size {unityData.Length} to Unity audio clip with {sampleCount} samples at frequency {frequency}.");
             var clip = ToClip("Speech", unityData, sampleCount, frequency);
 
-            // Set the source on the audio clip
-            audioSource.clip = clip;
-
             Debug.Log($"Trigger playback of audio clip on AudioSource.");
+
+            audioSource.clip = clip;
             // Play audio
             audioSource.Play();
         }
@@ -506,4 +509,20 @@ public class SpeechManager : MonoBehaviour {
             }
         }
     }
+
+    private float[] removeClickingFromAudio(float[] original)
+    {
+        int amountToRemove = 20;
+        //Remove pop at start
+        original = original[amountToRemove..];
+
+        //At the end due to there being a non-zero audio value, it causes a popping sound
+        for (int i = 1; i <= 200; i++)
+        {
+            original[^i] = 0f;
+        } 
+        
+        return original;
+    }
+
 }

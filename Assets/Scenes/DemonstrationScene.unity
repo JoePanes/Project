@@ -932,6 +932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Female_Adult_05_facial
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
+      propertyPath: m_TagString
+      value: NPC_Prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_Controller
       value: 
