@@ -20,7 +20,7 @@ MonoBehaviour:
     isPrivate: 0
     createdAt: 2022-04-05T05:45:06-0700
   configId: cbc74ae15398f79488d7055a5398b937
-  clientAccessToken: QIEQ2W2LSLBQ6DDMPZRJQ23S6TSGNR2D
+  clientAccessToken: UA67JZKU2G5C4PQTOLXC4XES25EZSOY3
   timeoutMS: 10000
   endpointConfiguration:
     uriScheme: 
