@@ -266,11 +266,12 @@ public class CharacterYarnLineHandler : MonoBehaviour
 
     public IEnumerator CharacterWaitForLineToFinish()                       //coroutine set to complete once the NPCs audio clip has completed
     {
-        anim.SetBool("is_talking", true);
-        yield return new WaitUntil(() => characterAudioSource.isPlaying);
+        characterModel.GetComponent<NPCAnimationController>().ToggleTalking();
         
+        yield return new WaitUntil(() => characterAudioSource.isPlaying);
         yield return new WaitUntil(() => !characterAudioSource.isPlaying);
-        anim.SetBool("is_talking", false);
+
+        characterModel.GetComponent<NPCAnimationController>().ToggleTalking();
         characterFinishedTalking.Invoke();
         //Debug.LogError(characterName + " finished talking");
     }
