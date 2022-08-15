@@ -11,6 +11,9 @@ public class CharacterYarnLineHandler : MonoBehaviour
 {
     public string characterName;
 
+    public GameObject characterModel;
+    private Animator anim;
+
     public YarnProject myYarnProject;
 
     public SpeechManager characterSpeechManager;
@@ -76,6 +79,7 @@ public class CharacterYarnLineHandler : MonoBehaviour
         GetLineIDs();
         SortLineIDs();
         GetLinesFromIDs();
+        anim = characterModel.GetComponent<Animator>();
     }
 
 
@@ -262,8 +266,11 @@ public class CharacterYarnLineHandler : MonoBehaviour
 
     public IEnumerator CharacterWaitForLineToFinish()                       //coroutine set to complete once the NPCs audio clip has completed
     {
+        anim.SetBool("is_talking", true);
         yield return new WaitUntil(() => characterAudioSource.isPlaying);
+        
         yield return new WaitUntil(() => !characterAudioSource.isPlaying);
+        anim.SetBool("is_talking", false);
         characterFinishedTalking.Invoke();
         //Debug.LogError(characterName + " finished talking");
     }

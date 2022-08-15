@@ -5,7 +5,8 @@ using UnityEngine;
 public class NPCAnimationController : MonoBehaviour
 {
     private Animator animControl;
-    private int numberOfBlinkingAnimation = 5;
+    private int numberOfBlinkingAnimations = 5;
+    private int numberOfIdleAnimations = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,7 @@ public class NPCAnimationController : MonoBehaviour
         animControl = GetComponent<Animator>();
         
         InvokeRepeating("SelectBlinkingAnimation", 0.0f, 10.0f);
+        InvokeRepeating("SelectIdleAnimation", 0.0f, 10.0f);
 
     }
 
@@ -25,6 +27,12 @@ public class NPCAnimationController : MonoBehaviour
     //Select one of the potential blinking animations
     void SelectBlinkingAnimation()
     {
-        animControl.SetFloat("blink", Random.Range(1, numberOfBlinkingAnimation + 1));
+        animControl.SetFloat("blink", Random.Range(1, numberOfBlinkingAnimations + 1));
+    }
+
+    //Select one of the potential idle animation
+    void SelectIdleAnimation()
+    {
+        animControl.SetFloat("idle", Random.Range(1, numberOfIdleAnimations + 1));
     }
 }
