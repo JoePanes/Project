@@ -16,7 +16,6 @@ public class NPCAnimationController : MonoBehaviour
     {
         animControl = GetComponent<Animator>();
         
-        InvokeRepeating("SelectBlinkingAnimation", 0.0f, 10.0f);
         InvokeRepeating("SelectIdleAnimation", 0.0f, 10.0f);
 
     }
@@ -25,12 +24,6 @@ public class NPCAnimationController : MonoBehaviour
     void Update()
     {
 
-    }
-
-    //Select one of the potential blinking animations
-    void SelectBlinkingAnimation()
-    {
-        animControl.SetFloat("blink", Random.Range(1, numberOfBlinkingAnimations + 1));
     }
 
     //Select one of the potential idle animation

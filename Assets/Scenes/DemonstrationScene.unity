@@ -588,15 +588,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3068023569106413502, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -11.455
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3068023569106413502, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -2.048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3068023569106413502, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -79.795
+      value: -91.549
       objectReference: {fileID: 0}
     - target: {fileID: 4643073776377646242, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -636,15 +636,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7111799819806522977, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -11.455
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7111799819806522977, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -2.048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7111799819806522977, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -79.795
+      value: -91.549
       objectReference: {fileID: 0}
     - target: {fileID: 7168446030013449138, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1001,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3465236566921144348, guid: e9b9b1ad1196b76499b5c78a48ef7b1c, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 4084442336395664528, guid: e9b9b1ad1196b76499b5c78a48ef7b1c, type: 3}
       propertyPath: m_Name
       value: === OVR RIG ===
@@ -1343,7 +1347,7 @@ MonoBehaviour:
   useMicroSaccades: 1
   useMacroSaccades: 1
   saccadeSpeed: 0.5
-  macroSaccadesPerMinute: 10
+  macroSaccadesPerMinute: 3
   microSaccadesPerMinuteLookingIdle: 45
   microSaccadesPerMinuteLookingAtPOI: 80
   useHeadJitter: 1
@@ -1403,14 +1407,14 @@ MonoBehaviour:
     leftEyeballEyeRotationLimiter:
       transform: {fileID: 3068023567760927890}
       defaultQ: {x: 0, y: 0, z: -0.6427876, w: 0.7660445}
-      lookUpQ: {x: 0.000000027749595, y: 0.0000000072979196, z: -0.5703393, w: 0.8214092}
+      lookUpQ: {x: -0.000000022569628, y: -0.00000002289383, z: -0.56044924, w: 0.82818884}
       lookDownQ: {x: 0.0000000280154, y: 0.000000010292926, z: -0.7324605, w: 0.68080956}
-      lookLeftQ: {x: 0.105646715, y: 0.12590484, z: -0.6340462, w: 0.755627}
-      lookRightQ: {x: -0.06514616, y: -0.07763827, z: -0.6394779, w: 0.7620999}
+      lookLeftQ: {x: 0.13709265, y: 0.16338064, z: -0.62799764, w: 0.7484192}
+      lookRightQ: {x: -0.11344135, y: -0.13519427, z: -0.6326982, w: 0.7540203}
       maxDownAngle: 14.186083
-      maxLeftAngle: 18.919779
-      maxRightAngle: 11.633715
-      maxUpAngle: 10.452146
+      maxLeftAngle: 24.629053
+      maxRightAngle: 20.330004
+      maxUpAngle: 11.826153
       isLookUpSet: 1
       isLookDownSet: 1
       isLookLeftSet: 1
@@ -1418,14 +1422,14 @@ MonoBehaviour:
     rightEyeballEyeRotationLimiter:
       transform: {fileID: 7111799820602750285}
       defaultQ: {x: 0, y: 0, z: -0.6427876, w: 0.7660445}
-      lookUpQ: {x: 0.000000027749595, y: 0.0000000072979196, z: -0.5703393, w: 0.8214092}
+      lookUpQ: {x: -0.000000022569628, y: -0.00000002289383, z: -0.56044924, w: 0.82818884}
       lookDownQ: {x: 0.0000000280154, y: 0.000000010292926, z: -0.7324605, w: 0.68080956}
-      lookLeftQ: {x: 0.105646715, y: 0.12590484, z: -0.6340462, w: 0.755627}
-      lookRightQ: {x: -0.06514616, y: -0.07763827, z: -0.6394779, w: 0.7620999}
+      lookLeftQ: {x: 0.13709265, y: 0.16338064, z: -0.62799764, w: 0.7484192}
+      lookRightQ: {x: -0.11344135, y: -0.13519427, z: -0.6326982, w: 0.7540203}
       maxDownAngle: 14.186083
-      maxLeftAngle: 18.919779
-      maxRightAngle: 11.633715
-      maxUpAngle: 10.452146
+      maxLeftAngle: 24.629053
+      maxRightAngle: 20.330004
+      maxUpAngle: 11.826153
       isLookUpSet: 1
       isLookDownSet: 1
       isLookLeftSet: 1
@@ -1527,7 +1531,7 @@ MonoBehaviour:
       lookUpQ: {x: 0.10190216, y: 0.10861938, z: -0.561858, w: 0.8137158}
       lookDownQ: {x: 0.10190216, y: 0.10861938, z: -0.561858, w: 0.8137158}
       eyeMaxDownAngle: 14.186083
-      eyeMaxUpAngle: 10.452146
+      eyeMaxUpAngle: 11.826153
       defaultPos: {x: -0.11015289, y: 0.07833301, z: 0.03185209}
       closedPos: {x: -0.098, y: 0.0829, z: 0.0324}
       lookUpPos: {x: -0.11015289, y: 0.07833301, z: 0.03185209}
@@ -1545,7 +1549,7 @@ MonoBehaviour:
       lookUpQ: {x: -0.101902165, y: -0.108616255, z: -0.56185865, w: 0.8137158}
       lookDownQ: {x: -0.101902165, y: -0.108616255, z: -0.56185865, w: 0.8137158}
       eyeMaxDownAngle: 14.186083
-      eyeMaxUpAngle: 10.452146
+      eyeMaxUpAngle: 11.826153
       defaultPos: {x: -0.11015289, y: 0.078333184, z: -0.031851653}
       closedPos: {x: -0.098, y: 0.0829, z: -0.0313}
       lookUpPos: {x: -0.11015289, y: 0.078333184, z: -0.031851653}
@@ -1563,7 +1567,7 @@ MonoBehaviour:
       lookUpQ: {x: 0.096129216, y: 0.08830036, z: -0.6701012, w: 0.7307028}
       lookDownQ: {x: 0.096129216, y: 0.08830036, z: -0.6701012, w: 0.7307028}
       eyeMaxDownAngle: 14.186083
-      eyeMaxUpAngle: 10.452146
+      eyeMaxUpAngle: 11.826153
       defaultPos: {x: -0.09629349, y: 0.081219, z: 0.03257058}
       closedPos: {x: -0.1002, y: 0.0809, z: 0.0324}
       lookUpPos: {x: -0.09629349, y: 0.081219, z: 0.03257058}
@@ -1581,7 +1585,7 @@ MonoBehaviour:
       lookUpQ: {x: -0.09612922, y: -0.08829665, z: -0.6701017, w: 0.7307028}
       lookDownQ: {x: -0.09612922, y: -0.08829665, z: -0.6701017, w: 0.7307028}
       eyeMaxDownAngle: 14.186083
-      eyeMaxUpAngle: 10.452146
+      eyeMaxUpAngle: 11.826153
       defaultPos: {x: -0.09629349, y: 0.0812192, z: -0.032570124}
       closedPos: {x: -0.1002, y: 0.0809, z: -0.0327}
       lookUpPos: {x: -0.09629349, y: 0.0812192, z: -0.032570124}
@@ -1592,7 +1596,7 @@ MonoBehaviour:
       isClosedPosSet: 1
       isLookUpPosSet: 1
       isLookDownPosSet: 1
-    eyeWidenOrSquint: 1
+    eyeWidenOrSquint: 0
     blendshapesForBlinking: []
     blendshapesForLookingUp: []
     blendshapesForLookingDown: []
@@ -1605,7 +1609,7 @@ MonoBehaviour:
     isEyelidBlendshapeLookDownSet: 0
     isEyelidBlendshapeLookLeftSet: 0
     isEyelidBlendshapeLookRightSet: 0
-  eyelidsWeight: 0
+  eyelidsWeight: 1
   kMinNextBlinkTime: 0
   kMaxNextBlinkTime: 10
   blinkSpeed: 0.6
@@ -1625,14 +1629,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5ab26285e294787a92bc8bba92c30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsOfInterest:
-  - {fileID: 3974987786278050816}
-  lookAtPlayerRatio: 0.7
-  stareBackFactor: 0.726
+  pointsOfInterest: []
+  lookAtPlayerRatio: 0.8
+  stareBackFactor: 0.5
   noticePlayerDistance: 100
   personalSpaceDistance: 0
   minLookTime: 6
-  maxLookTime: 30
+  maxLookTime: 12
   thirdPersonPlayerEyeCenter: {fileID: 0}
   keepTargetEvenWhenLost: 1
   avoidLookingThroughPlayer: 1
@@ -2052,11 +2055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3974987786278050816 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3465236566920721460, guid: e9b9b1ad1196b76499b5c78a48ef7b1c, type: 3}
-  m_PrefabInstance: {fileID: 522136187052124212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4027920114298492721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5195451923341370339, guid: 14a7c6e94a1daf648a73b1708937b6b5, type: 3}
