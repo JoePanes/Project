@@ -1,0 +1,461 @@
+{
+    "mainWeight": 1.0,
+    "eyesWeight": 1.0,
+    "eyelidsWeight": 1.0,
+    "headControl": 1,
+    "headAnimationType": 0,
+    "updateType": 0,
+    "headBonePath": "",
+    "neckBonePath": "",
+    "spineBonePath": "",
+    "headChangeToNewTargetSpeed": 1.0,
+    "headTrackTargetSpeed": 1.0,
+    "headWeight": 0.75,
+    "bodyWeight": 0.10000000149011612,
+    "neckHorizWeight": 0.5,
+    "neckVertWeight": 0.5,
+    "resetHeadAtFrameStart": false,
+    "useMicroSaccades": true,
+    "useMacroSaccades": true,
+    "useHeadJitter": true,
+    "headJitterFrequency": 0.20000000298023225,
+    "headJitterAmplitude": 1.0,
+    "kDrawSightlinesInEditor": false,
+    "controlData": {
+        "eyeWidenOrSquint": 0.0,
+        "eyeControl": 2,
+        "eyelidBoneMode": 0,
+        "leftEyePath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEye",
+        "rightEyePath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REye",
+        "maxEyeUpBoneAngle": 20.0,
+        "maxEyeDownBoneAngle": 20.0,
+        "maxEyeUpEyeballAngle": 20.0,
+        "maxEyeDownEyeballAngle": 20.0,
+        "isEyeBallDefaultSet": true,
+        "isEyeBoneDefaultSet": false,
+        "isEyeBallLookUpSet": true,
+        "isEyeBoneLookUpSet": false,
+        "isEyeBallLookDownSet": true,
+        "isEyeBoneLookDownSet": false,
+        "isEyeBallLookLeftSet": true,
+        "isEyeBoneLookLeftSet": false,
+        "isEyeBallLookRightSet": true,
+        "isEyeBoneLookRightSet": false,
+        "leftBoneEyeRotationLimiter": {
+            "transformPath": "",
+            "defaultQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookUpQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookDownQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookLeftQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookRightQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "isLookUpSet": false,
+            "isLookDownSet": false,
+            "isLookLeftSet": false,
+            "isLookRightSet": false
+        },
+        "rightBoneEyeRotationLimiter": {
+            "transformPath": "",
+            "defaultQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookUpQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookDownQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookLeftQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "lookRightQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "isLookUpSet": false,
+            "isLookDownSet": false,
+            "isLookLeftSet": false,
+            "isLookRightSet": false
+        },
+        "leftEyeballEyeRotationLimiter": {
+            "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEye",
+            "defaultQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -0.6427875757217407,
+                "w": 0.7660444974899292
+            },
+            "lookUpQ": {
+                "x": 2.7749594622150654e-8,
+                "y": 7.297919601967351e-9,
+                "z": -0.5703393220901489,
+                "w": 0.8214092254638672
+            },
+            "lookDownQ": {
+                "x": 2.801539977781431e-8,
+                "y": 1.029292562293449e-8,
+                "z": -0.7324604988098145,
+                "w": 0.6808095574378967
+            },
+            "lookLeftQ": {
+                "x": 0.10564671456813812,
+                "y": 0.125904843211174,
+                "z": -0.634046196937561,
+                "w": 0.7556269764900208
+            },
+            "lookRightQ": {
+                "x": -0.1780446171760559,
+                "y": -0.21218541264533997,
+                "z": -0.6176374554634094,
+                "w": 0.7360716462135315
+            },
+            "isLookUpSet": true,
+            "isLookDownSet": true,
+            "isLookLeftSet": true,
+            "isLookRightSet": true
+        },
+        "rightEyeballEyeRotationLimiter": {
+            "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REye",
+            "defaultQ": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -0.6427875757217407,
+                "w": 0.7660444974899292
+            },
+            "lookUpQ": {
+                "x": 2.7749594622150654e-8,
+                "y": 7.297919601967351e-9,
+                "z": -0.5703393220901489,
+                "w": 0.8214092254638672
+            },
+            "lookDownQ": {
+                "x": 2.801539977781431e-8,
+                "y": 1.029292562293449e-8,
+                "z": -0.7324604988098145,
+                "w": 0.6808095574378967
+            },
+            "lookLeftQ": {
+                "x": 0.10564671456813812,
+                "y": 0.125904843211174,
+                "z": -0.634046196937561,
+                "w": 0.7556269764900208
+            },
+            "lookRightQ": {
+                "x": -0.1780446171760559,
+                "y": -0.21218541264533997,
+                "z": -0.6176374554634094,
+                "w": 0.7360716462135315
+            },
+            "isLookUpSet": true,
+            "isLookDownSet": true,
+            "isLookLeftSet": true,
+            "isLookRightSet": true
+        },
+        "eyelidControl": 1,
+        "upperLeftEyelidBonePaths": [
+            "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEyeBlinkTop"
+        ],
+        "upperRightEyelidBonePaths": [
+            "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REyeBlinkTop"
+        ],
+        "lowerLeftEyelidBonePaths": [
+            "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEyeBlinkBottom"
+        ],
+        "lowerRightEyelidBonePaths": [
+            "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REyeBlinkBottom"
+        ],
+        "isEyelidBonesDefaultSet": true,
+        "isEyelidBonesClosedSet": true,
+        "isEyelidBonesLookUpSet": true,
+        "isEyelidBonesLookDownSet": true,
+        "upperLeftLimiters": [
+            {
+                "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEyeBlinkTop",
+                "defaultQ": {
+                    "x": 0.10190215706825257,
+                    "y": 0.10861937701702118,
+                    "z": -0.5618579983711243,
+                    "w": 0.8137158155441284
+                },
+                "closedQ": {
+                    "x": 0.10190215706825257,
+                    "y": 0.10861937701702118,
+                    "z": -0.5618579983711243,
+                    "w": 0.8137158155441284
+                },
+                "lookUpQ": {
+                    "x": 0.10190215706825257,
+                    "y": 0.10861937701702118,
+                    "z": -0.5618579983711243,
+                    "w": 0.8137158155441284
+                },
+                "lookDownQ": {
+                    "x": 0.10190215706825257,
+                    "y": 0.10861937701702118,
+                    "z": -0.5618579983711243,
+                    "w": 0.8137158155441284
+                },
+                "eyeMaxDownAngle": 14.18608283996582,
+                "eyeMaxUpAngle": 10.45214557647705,
+                "defaultPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833301275968552,
+                    "z": 0.03185208886861801
+                },
+                "closedPos": {
+                    "x": -0.09799999743700028,
+                    "y": 0.08290000259876251,
+                    "z": 0.03240000084042549
+                },
+                "lookUpPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833301275968552,
+                    "z": 0.03185208886861801
+                },
+                "lookDownPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833301275968552,
+                    "z": 0.03185208886861801
+                },
+                "isLookUpSet": true,
+                "isLookDownSet": true,
+                "isDefaultPosSet": true,
+                "isClosedPosSet": true,
+                "isLookUpPosSet": true,
+                "isLookDownPosSet": true
+            }
+        ],
+        "upperRightLimiters": [
+            {
+                "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REyeBlinkTop",
+                "defaultQ": {
+                    "x": -0.10190216451883316,
+                    "y": -0.10861625522375107,
+                    "z": -0.5618586540222168,
+                    "w": 0.8137158155441284
+                },
+                "closedQ": {
+                    "x": -0.10190216451883316,
+                    "y": -0.10861625522375107,
+                    "z": -0.5618586540222168,
+                    "w": 0.8137158155441284
+                },
+                "lookUpQ": {
+                    "x": -0.10190216451883316,
+                    "y": -0.10861625522375107,
+                    "z": -0.5618586540222168,
+                    "w": 0.8137158155441284
+                },
+                "lookDownQ": {
+                    "x": -0.10190216451883316,
+                    "y": -0.10861625522375107,
+                    "z": -0.5618586540222168,
+                    "w": 0.8137158155441284
+                },
+                "eyeMaxDownAngle": 14.18608283996582,
+                "eyeMaxUpAngle": 10.45214557647705,
+                "defaultPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833318412303925,
+                    "z": -0.03185165300965309
+                },
+                "closedPos": {
+                    "x": -0.09799999743700028,
+                    "y": 0.08290000259876251,
+                    "z": -0.031300000846385959
+                },
+                "lookUpPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833318412303925,
+                    "z": -0.03185165300965309
+                },
+                "lookDownPos": {
+                    "x": -0.11015289276838303,
+                    "y": 0.07833318412303925,
+                    "z": -0.03185165300965309
+                },
+                "isLookUpSet": true,
+                "isLookDownSet": true,
+                "isDefaultPosSet": true,
+                "isClosedPosSet": true,
+                "isLookUpPosSet": true,
+                "isLookDownPosSet": true
+            }
+        ],
+        "lowerLeftLimiters": [
+            {
+                "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 LEyeBlinkBottom",
+                "defaultQ": {
+                    "x": 0.09612921625375748,
+                    "y": 0.08830036222934723,
+                    "z": -0.6701012253761292,
+                    "w": 0.730702817440033
+                },
+                "closedQ": {
+                    "x": 0.09612921625375748,
+                    "y": 0.08830036222934723,
+                    "z": -0.6701012253761292,
+                    "w": 0.730702817440033
+                },
+                "lookUpQ": {
+                    "x": 0.09612921625375748,
+                    "y": 0.08830036222934723,
+                    "z": -0.6701012253761292,
+                    "w": 0.730702817440033
+                },
+                "lookDownQ": {
+                    "x": 0.09612921625375748,
+                    "y": 0.08830036222934723,
+                    "z": -0.6701012253761292,
+                    "w": 0.730702817440033
+                },
+                "eyeMaxDownAngle": 14.18608283996582,
+                "eyeMaxUpAngle": 10.45214557647705,
+                "defaultPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121900260448456,
+                    "z": 0.032570578157901767
+                },
+                "closedPos": {
+                    "x": -0.10019999742507935,
+                    "y": 0.08089999854564667,
+                    "z": 0.03240000084042549
+                },
+                "lookUpPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121900260448456,
+                    "z": 0.032570578157901767
+                },
+                "lookDownPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121900260448456,
+                    "z": 0.032570578157901767
+                },
+                "isLookUpSet": true,
+                "isLookDownSet": true,
+                "isDefaultPosSet": true,
+                "isClosedPosSet": true,
+                "isLookUpPosSet": true,
+                "isLookDownPosSet": true
+            }
+        ],
+        "lowerRightLimiters": [
+            {
+                "transformPath": "Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine2/Bip01 Neck/Bip01 Head/Bip01 REyeBlinkBottom",
+                "defaultQ": {
+                    "x": -0.09612922370433808,
+                    "y": -0.08829665184020996,
+                    "z": -0.6701017022132874,
+                    "w": 0.730702817440033
+                },
+                "closedQ": {
+                    "x": -0.09612922370433808,
+                    "y": -0.08829665184020996,
+                    "z": -0.6701017022132874,
+                    "w": 0.730702817440033
+                },
+                "lookUpQ": {
+                    "x": -0.09612922370433808,
+                    "y": -0.08829665184020996,
+                    "z": -0.6701017022132874,
+                    "w": 0.730702817440033
+                },
+                "lookDownQ": {
+                    "x": -0.09612922370433808,
+                    "y": -0.08829665184020996,
+                    "z": -0.6701017022132874,
+                    "w": 0.730702817440033
+                },
+                "eyeMaxDownAngle": 14.18608283996582,
+                "eyeMaxUpAngle": 10.45214557647705,
+                "defaultPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121919631958008,
+                    "z": -0.03257012367248535
+                },
+                "closedPos": {
+                    "x": -0.10019999742507935,
+                    "y": 0.08089999854564667,
+                    "z": -0.03269999846816063
+                },
+                "lookUpPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121919631958008,
+                    "z": -0.03257012367248535
+                },
+                "lookDownPos": {
+                    "x": -0.09629348665475846,
+                    "y": 0.08121919631958008,
+                    "z": -0.03257012367248535
+                },
+                "isLookUpSet": true,
+                "isLookDownSet": true,
+                "isDefaultPosSet": true,
+                "isClosedPosSet": true,
+                "isLookUpPosSet": true,
+                "isLookDownPosSet": true
+            }
+        ],
+        "blendshapesForBlinking": [],
+        "blendshapesForLookingUp": [],
+        "blendshapesForLookingDown": [],
+        "blendshapesForLookingLeft": [],
+        "blendshapesForLookingRight": [],
+        "isEyelidBlendshapeDefaultSet": false,
+        "isEyelidBlendshapeClosedSet": false,
+        "isEyelidBlendshapeLookUpSet": false,
+        "isEyelidBlendshapeLookDownSet": false,
+        "isEyelidBlendshapeLookLeftSet": false,
+        "isEyelidBlendshapeLookRightSet": false,
+        "arePathsRelativeToHead": false
+    },
+    "kMinNextBlinkTime": 3.0,
+    "kMaxNextBlinkTime": 15.0,
+    "blinkSpeed": 1.0,
+    "eyelidsFollowEyesVertically": true,
+    "idleTargetHorizAngle": 10.0,
+    "crossEyeCorrection": 1.0,
+    "saccadeSpeed": 0.5,
+    "macroSaccadesPerMinute": 10.0,
+    "microSaccadesPerMinuteLookingIdle": 45.0,
+    "microSaccadesPerMinuteLookingAtPOI": 80.0,
+    "limitHeadAngle": 0.0
+}

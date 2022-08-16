@@ -12,7 +12,6 @@ public class CharacterYarnLineHandler : MonoBehaviour
     public string characterName;
 
     public GameObject characterModel;
-    private Animator anim;
 
     public YarnProject myYarnProject;
 
@@ -79,7 +78,6 @@ public class CharacterYarnLineHandler : MonoBehaviour
         GetLineIDs();
         SortLineIDs();
         GetLinesFromIDs();
-        anim = characterModel.GetComponent<Animator>();
     }
 
 
