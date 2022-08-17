@@ -25,7 +25,7 @@ public class NPCAnimationController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (ConversationController.GetComponent<ConversationController>().someoneTalking)
         {
