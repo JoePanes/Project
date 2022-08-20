@@ -74,3 +74,5 @@ crashlytics-build.properties
 /Assets/Plugins/KeenASR/iOS
 /Assets/StreamingAssets/vosk-model-en-us-0.22-lgraph.zip
 
+/Assets/Resources/Keys/
+/Assets/Resources/Keys.meta
