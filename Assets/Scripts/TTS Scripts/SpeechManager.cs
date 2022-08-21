@@ -28,11 +28,18 @@ public class SpeechManager : MonoBehaviour {
     // The free tier gives you 5,000 free API transactions / month.
     // Set credentials in the Inspector
     public string Character;
-    [Tooltip("Cognitive Services Speech API Key")]
-    [SecretValue("SpeechService_APIKey")]
+
+    // While the use of a secret value is a good idea, it seems undermined by having it
+    // stored and accessible to anyone through the Github repository
+    //[Tooltip("Cognitive Services Speech API Key")]
+    //[SecretValue("SpeechService_APIKey")]
+
+    private string apiPath = "Assets/Resources/Keys/azure.txt";
+
     public string SpeechServiceAPIKey = string.Empty;
-    [Tooltip("Cognitive Services Speech Service Region.")]
-    [SecretValue("SpeechService_Region")]
+    
+    //[Tooltip("Cognitive Services Speech Service Region.")]
+    //[SecretValue("SpeechService_Region")]
     public string SpeechServiceRegion = string.Empty;
 
     [Tooltip("The audio source where speech will be played.")]
@@ -51,9 +58,11 @@ public class SpeechManager : MonoBehaviour {
 
     private void Awake()
     {
-        // Attempt to load API secrets
-        SecretHelper.LoadSecrets(this);
+        // Load API
 
+        StreamReader reader = new StreamReader(apiPath);
+        SpeechServiceAPIKey = reader.ReadToEnd();
+    
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
