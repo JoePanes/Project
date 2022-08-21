@@ -10,20 +10,20 @@ tags:
 //NPC_Prefab 
 <<set $characterToTalk to "NPCPrefab">> 
 <<NPC_start_talking DialogueRunner>> 
-This is the line of text to be spoken by the character. #line:0582b92_NPCPrefab 
+Well I shouted over to Emily. Having sandwiches again then Emily? And everyone laughed so I carried on for a bit. #line:0582b92_NPCPrefab 
 <<NPC_finish_talking_wait DialogueRunner>> 
 
 
 //NPC_Prefab 
 <<set $characterToTalk to "NPCPrefab">> 
 <<NPC_start_talking DialogueRunner>> 
-Ensure that the charaterToTalk variable is set to the name of your character, and that they have a tag of the same as well.  #line:053f34b_NPCPrefab 
+Good, establish how Jonathan was feeling at the time of the incident. Gain as much detail as you can.  #line:053f34b_NPCPrefab 
 <<NPC_finish_talking_wait DialogueRunner>> 
 
 //NPC_Prefab 
 <<set $characterToTalk to "NPCPrefab">> 
 <<NPC_start_talking DialogueRunner>> 
-You will then need to add line endings via the Yarn project, and add the character name.  #line:022a9fd_NPCPrefab 
+I want him to stop saying those things. #line:022a9fd_NPCPrefab 
 <<NPC_finish_talking_wait DialogueRunner>> 
 
 <<activate_voice_recognition DialogueRunner>> 

@@ -291,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d3443674ad7d24b800c129687c4efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  persona: a 27 year old female teacher, who is kind and patient
+  currentMood: 
 --- !u!1 &390179776
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +369,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390179776}
   m_CullTransparentMesh: 1
+--- !u!1 &479681207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479681208}
+  - component: {fileID: 479681209}
+  m_Layer: 0
+  m_Name: NPC_GPT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479681208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479681207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2064199097357815608}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479681209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479681207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d3443674ad7d24b800c129687c4efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persona: 'a 26 year old female school teacher '
+  currentMood: 
 --- !u!1 &1071355883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1479,7 @@ MonoBehaviour:
   useMicroSaccades: 1
   useMacroSaccades: 1
   saccadeSpeed: 0.5
-  macroSaccadesPerMinute: 3
+  macroSaccadesPerMinute: 1
   microSaccadesPerMinuteLookingIdle: 45
   microSaccadesPerMinuteLookingAtPOI: 80
   useHeadJitter: 1
@@ -2019,6 +2067,7 @@ MonoBehaviour:
   myYarnProject: {fileID: 7545569452688597077, guid: 31220f5157f7ba54aa56f716dd229610, type: 3}
   characterSpeechManager: {fileID: 2064199096709823235}
   characterAudioSource: {fileID: 2064199095809875435}
+  GPTHandler: {fileID: 479681207}
   characterTextLineList: []
   characterNegativeLineList: []
   characterNeutralLineList: []
@@ -2074,6 +2123,7 @@ Transform:
   - {fileID: 2064199095809875415}
   - {fileID: 2064199096709823232}
   - {fileID: 543450652367056071}
+  - {fileID: 479681208}
   m_Father: {fileID: 2402649908642421964}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
