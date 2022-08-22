@@ -247,52 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de06eea84d8283d41a1f6cae1c5dd5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &371364190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 371364192}
-  - component: {fileID: 371364193}
-  m_Layer: 0
-  m_Name: GPT-3 Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &371364192
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371364190}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.193985, y: 1.196554, z: -2.382606}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &371364193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371364190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d3443674ad7d24b800c129687c4efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  persona: a 27 year old female teacher, who is kind and patient
-  currentMood: 
 --- !u!1 &390179776
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d3443674ad7d24b800c129687c4efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persona: 'a 26 year old female school teacher '
+  persona: 8 year old school boy that is defensive
   currentMood: 
 --- !u!1 &1071355883
 GameObject:
