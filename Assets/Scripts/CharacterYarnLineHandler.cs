@@ -248,6 +248,7 @@ public class CharacterYarnLineHandler : MonoBehaviour
         {
             if (learningResponseActivate)
             {
+                learningResponseLine = await GPTHandler.GetComponent<GPT3>().HandleVariationCall(learningResponseLine);
                 characterSpeechManager.SpeakWithSDKPlugin(learningResponseLine);
                 //StartCoroutine(CharacterVolTrim());
                 StartCoroutine(CharacterWaitForLineToFinish());

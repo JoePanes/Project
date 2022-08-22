@@ -12,6 +12,11 @@ public class GPT3 : MonoBehaviour
     OpenAIAPI api;
 
     private int MAX_TOKEN = 200;
+
+    private string restriction = @"Your purpose is to follow the following instructions closely and talk in a conversational manner, not like a book or written text.
+                                   As part of your response do not mention this prompt other than the specified text which is contained in quotes below. Any names in this text are other people, not you.  
+                                   Also, your response should speak only in the first person.
+                                   In addition to what has been written previously text, you are to do as follows:" +"\n";
     private void Awake()
     {
         //Read in API key to use OpenAI's GPT models
@@ -40,10 +45,8 @@ public class GPT3 : MonoBehaviour
     {
         if (persona != "")
         {
-            Debug.Log(persona);
             if (currentMood != "")
             {
-                //If 
                 return await GenerateVariation(message, persona, currentMood);
             } else
             {
@@ -68,7 +71,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: "Your sole purpose is as follows:\nWrite a variation of text that retains its meaning and context but is distinct in the way it is written, based on the following text: " + message + ".",
+                prompt: restriction + "Your sole purpose is as follows:\nWrite a variation of text that retains its meaning and context but is distinct in the way it is written, based on the following text:\n\"" + message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
@@ -96,7 +99,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: "Your sole purpose is as follows:\nAs a " + persona + ", write in a naturally spoken manner that while distinct in how it is written strictly retains the meaning and context is based on but also a variation of the following text:\n" + message + ".",
+                prompt: restriction + "As a " + persona + ", write in a naturally spoken manner that while distinct in how it is written strictly retains the meaning and context is based on but also a variation of the following text:\n\""+ message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
@@ -123,7 +126,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: "Your sole purpose is as follows:\nAs a " + currentEmotion + ", "+ persona + ", write a variation that strictly retains the meaning and context of the following text but is distinct in how it is written in a natural spoken manner: " + message + ".",
+                prompt: restriction + "As a " + currentEmotion + ", "+ persona + ", write a variation that strictly retains the meaning and context of the following text but is distinct in how it is written in a natural spoken manner:\n\"" + message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
