@@ -20,6 +20,8 @@ public class NPCAnimationController : MonoBehaviour
         animControl = GetComponent<Animator>();
         
         InvokeRepeating("SelectIdleAnimation", 0.0f, 10.0f);
+        InvokeRepeating("SelectListeningAnimation", 0.0f, 3.0f);
+        InvokeRepeating("SelectTalkingAnimation", 0.0f, 10.0f);
 
         ConversationController = GameObject.Find("ConversationController");
     }
@@ -61,7 +63,6 @@ public class NPCAnimationController : MonoBehaviour
         } else 
         {
             //Select animation prior to toggles
-            SelectTalkingAnimation();
             animControl.SetBool("is_talking", true);
         }
     }
@@ -80,7 +81,6 @@ public class NPCAnimationController : MonoBehaviour
         else
         {
             //Select animation prior to toggles
-            SelectListeningAnimation();
             animControl.SetBool("is_listening", true);
         }
     }
@@ -88,5 +88,39 @@ public class NPCAnimationController : MonoBehaviour
     void SelectListeningAnimation()
     {
         animControl.SetFloat("listen", Random.Range(1, numberOfListeningAnimations + 1));
+    }
+
+    public void UpdateEmotion(string sentiment)
+    {
+        sentiment = sentiment.ToLower();
+        switch (sentiment)
+        {
+            case "positive":
+                animControl.SetBool("positive", true);
+                animControl.SetBool("aggressive", false);
+                animControl.SetBool("negative", false);
+                break;
+            case "aggressive":
+                animControl.SetBool("positive", false);
+                animControl.SetBool("aggressive", true);
+                animControl.SetBool("negative", false);
+                break;
+            case "negative":
+                animControl.SetBool("positive", false);
+                animControl.SetBool("aggressive", false);
+                animControl.SetBool("negative", true);
+                break;
+            case "neutal":
+                animControl.SetBool("positive", false);
+                animControl.SetBool("aggressive", false);
+                animControl.SetBool("negative", false);
+                break;
+            default:
+                animControl.SetBool("positive", false);
+                animControl.SetBool("aggressive", false);
+                animControl.SetBool("negative", false);
+                break;
+        }
+
     }
 }

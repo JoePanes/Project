@@ -1,5 +1,7 @@
 using OpenAI_API;
+using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -13,10 +15,11 @@ public class GPT3 : MonoBehaviour
 
     private int MAX_TOKEN = 200;
 
-    private string restriction = @"Your purpose is to follow the following instructions closely and talk in a conversational manner, not like a book or written text.
-                                   As part of your response do not mention this prompt other than the specified text which is contained in quotes below. Any names in this text are other people, not you.  
-                                   Also, your response should speak only in the first person.
-                                   In addition to what has been written previously text, you are to do as follows:" +"\n";
+    private string restriction = @"The following is for a conversation that you are having with the user, write in a spoken manner in first person.
+                                   You have a virtual avatar, so please do not write descriptive text.
+                                   For your prompt, only reference the quoted text, everything else is instructional so as to help construct your response. 
+                                   Any names in this text are other people, not you, nor the person you are speaking to.  
+                                   In addition, follow these next instructions closely:" +"\n";
     private void Awake()
     {
         //Read in API key to use OpenAI's GPT models
@@ -71,7 +74,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: restriction + "Your sole purpose is as follows:\nWrite a variation of text that retains its meaning and context but is distinct in the way it is written, based on the following text:\n\"" + message + "\".",
+                prompt: restriction + "Your sole purpose is as follows:\n Write in a naturally spoken manner that is distinct in how it is written, strictly retains the meaning and context is based on but also is a variation of the following text:\n\"" + message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
@@ -99,7 +102,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: restriction + "As a " + persona + ", write in a naturally spoken manner that while distinct in how it is written strictly retains the meaning and context is based on but also a variation of the following text:\n\""+ message + "\".",
+                prompt: restriction + "You are a " + persona + ", write in a naturally spoken manner that is distinct in how it is written, strictly retains the meaning and context is based on but also is a variation of the following text:\n\""+ message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
@@ -126,7 +129,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: restriction + "As a " + currentEmotion + ", "+ persona + ", write a variation that strictly retains the meaning and context of the following text but is distinct in how it is written in a natural spoken manner:\n\"" + message + "\".",
+                prompt: restriction + "You are a " + currentEmotion + ", "+ persona + ", write in a naturally spoken manner that is distinct in how it is written, strictly retains the meaning and context is based on but also is a variation of the following text:\n\"" + message + "\".",
                 max_tokens: MAX_TOKEN,
                 temperature: 1
                 );
@@ -138,5 +141,33 @@ public class GPT3 : MonoBehaviour
             Debug.LogError(e.Message);
         }
         return "If you are hearing this, then there has been an error when using the generate variation function for GPT-3.";
+    }
+
+    public async Task<string> GetSentiment(string text)
+    {
+        try
+        {
+            var result = await api.Completions.CreateCompletionAsync(
+                prompt: "For the following quoted text, classify as just one word its sentiment inte categories of either postive, negative, aggressive, or if anything else neutral." + text + ". The only accepted response is in just one word.",
+                max_tokens: 15,
+                temperature: 0.2
+                );
+            string sentiment = RemoveWhitespace(result.ToString());
+        
+            Debug.Log("Sentiment: " + sentiment);
+            return sentiment;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(e.Message);
+        }
+        //In the event of an error, return neutral
+        return "error =(";
+    }
+
+    public static string RemoveWhitespace(string input)
+    {
+        return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c))
+            .ToArray());
     }
 }

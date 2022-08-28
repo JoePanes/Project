@@ -243,13 +243,16 @@ public class CharacterYarnLineHandler : MonoBehaviour
     public async void CharacterSpeechPlayback()                                   //sets the line to be sent to the TTS from the line list and sends
     {
         //Debug.LogError(characterName + " speaking...");
-
+        string sentiment;
         if (characterSpeechManager.isReady)
         {
             if (learningResponseActivate)
             {
                 learningResponseLine = await GPTHandler.GetComponent<GPT3>().HandleVariationCall(learningResponseLine);
                 characterSpeechManager.SpeakWithSDKPlugin(learningResponseLine);
+                
+                sentiment = await GPTHandler.GetComponent<GPT3>().GetSentiment(learningResponseLine);
+                characterModel.GetComponent<NPCAnimationController>().UpdateEmotion(sentiment);
                 //StartCoroutine(CharacterVolTrim());
                 StartCoroutine(CharacterWaitForLineToFinish());
                 learningResponseActivate = false;
@@ -261,6 +264,11 @@ public class CharacterYarnLineHandler : MonoBehaviour
 
                 Debug.Log(lineToBeSpoken);
                 characterSpeechManager.SpeakWithSDKPlugin(lineToBeSpoken);
+                
+                sentiment = await GPTHandler.GetComponent<GPT3>().GetSentiment(lineToBeSpoken);
+                characterModel.GetComponent<NPCAnimationController>().UpdateEmotion(sentiment);
+
+
                 characterLineCount++;
                 StartCoroutine(CharacterWaitForLineToFinish());
             }
