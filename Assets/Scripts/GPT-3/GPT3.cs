@@ -148,7 +148,7 @@ public class GPT3 : MonoBehaviour
         try
         {
             var result = await api.Completions.CreateCompletionAsync(
-                prompt: "For the following quoted text, classify as just one word its sentiment inte categories of either postive, negative, aggressive, or if anything else neutral." + text + ". The only accepted response is in just one word.",
+                prompt: "For the following quoted text, classify as just one word its sentiment into categories of either positive, negative, aggressive, or if anything else neutral." + text + ". The only acceptable response is in just one word.",
                 max_tokens: 15,
                 temperature: 0.2
                 );
